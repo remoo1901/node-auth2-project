@@ -1,6 +1,7 @@
 const express = require("express")
 const helmet = require("helmet")
 const cors = require("cors")
+const bcrypt = require("bcryptjs");
 const cookieParser = require("cookie-parser")
 const userRouter = require("./users/users-routers")
 
