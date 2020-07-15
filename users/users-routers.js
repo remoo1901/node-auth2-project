@@ -76,7 +76,8 @@ router.post("/login", async (req, res, next) => {
 router.get("/logout", async (req, res, next) => {
   try {
     
-        res.status(204).json({message: "OUT"})
+    res.clearCookie("token");
+    res.send("cookie has been eaten")
     
   } catch (err) {
     next(err);
